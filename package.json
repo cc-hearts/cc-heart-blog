@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/node": "^18.11.11",
+    "sass": "^1.56.2",
     "vitepress": "1.0.0-alpha.30"
   }
 }

@@ -4,16 +4,14 @@ const nav: DefaultTheme.NavItem[] = [
   { text: "Guide", link: "/guide/" },
   { text: "Components", link: "/components/" },
   // 顶部导航下拉菜单按如下方式：
-  /*
   {
-    text: 'Dropdown Menu',
-    items: [
-      { text: 'Item A', link: '/item-1' },
-      { text: 'Item B', link: '/item-2' },
-      { text: 'Item C', link: '/item-3' }
-    ]
-  }
-   */
+    text: "FE",
+    items: [{ text: "node", link: "/FE/node/" }],
+  },
+  {
+    text: "TODO",
+    link: "/todo/",
+  },
 ];
 
 export default defineConfig({
@@ -23,6 +21,6 @@ export default defineConfig({
   base: "/",
   lastUpdated: true,
   themeConfig: {
-    nav
-  }
+    nav,
+  },
 });
