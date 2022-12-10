@@ -7,4 +7,4 @@ title: TODO
 
 # 🌰 TODO
 
-<ProgressBar content="grid games" :step="3" :total="84" />
+<ProgressBar content="grid games" alt="https://codingfantasy.com/games/flexboxadventure/play" :step="3" :total="84" />

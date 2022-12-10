@@ -1,16 +1,20 @@
 <template>
-  <div>
+  <div class="progress-wrapper">
     <span>
       {{ content }}
     </span>
     <div
-      id="progress-bar"
+      class="progress-bar"
+      :title="alt"
       :style="{
         '--progress-bar-step': percentWidth,
       }"
     >
       <div></div>
     </div>
+    <span>
+      {{ percentWidth }}
+    </span>
   </div>
 </template>
 
@@ -31,16 +35,22 @@ const props = defineProps({
     type: Number,
     default: 0,
   },
+  alt: {
+    type: String,
+    default: "",
+  },
 });
 
 const percentWidth = computed(() => {
-  return Number.parseFloat(String((props.step * 100) / props.total)) + "%";
+  return (
+    Number.parseFloat(String((props.step * 100) / props.total)).toFixed(2) + "%"
+  );
 });
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/scss/_variable.scss";
-#progress-bar {
+.progress-bar {
   --#{$prefix}-progress-bar-bgc: #f57c00;
   --progress-bar-step: 0;
   --#{$prefix}-progress-bar-transform: rgba(255, 255, 255, 0.4);
@@ -86,6 +96,26 @@ const percentWidth = computed(() => {
 
   100% {
     background-position: 0 0;
+  }
+}
+
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  & > span {
+    &:first-child {
+      display: inline-block;
+      text-align: center;
+      width: 200px;
+      &::after {
+        padding-right: 1em;
+        content: ":";
+      }
+    }
+    &:last-child {
+      margin-left: 1em;
+    }
   }
 }
 </style>
