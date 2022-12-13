@@ -12,6 +12,10 @@ const nav: DefaultTheme.NavItem[] = [
     text: "TODO",
     link: "/todo/",
   },
+  {
+    text: "mixed",
+    link: "/mixed/",
+  },
 ];
 
 export default defineConfig({
@@ -19,6 +23,9 @@ export default defineConfig({
   description: "life",
   lang: "cn-ZH",
   base: "/",
+  markdown: {
+    lineNumbers: true,
+  },
   lastUpdated: true,
   themeConfig: {
     nav,
