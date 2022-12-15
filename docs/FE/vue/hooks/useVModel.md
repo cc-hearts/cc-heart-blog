@@ -2,10 +2,11 @@
 title: useVModel 的实现
 ---
 
-实现一个简易版的`useVModel` 可以避免`children.vue` 重复定义许多的 emits 以及转发函数
+实现一个简易版的`useVModel` 可以避免子组件透传 重复定义`emits`以及`forwardFunction`
 
 DONE:
-- [x] 支持`ref`、`reactive` 等两种
+
+- 支持`ref`、`reactive` 等两种
 
 ```vue
 <!-- children.vue -->
