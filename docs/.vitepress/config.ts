@@ -6,7 +6,10 @@ const nav: DefaultTheme.NavItem[] = [
   // 顶部导航下拉菜单按如下方式：
   {
     text: "FE",
-    items: [{ text: "node", link: "/FE/node/" }],
+    items: [
+      { text: "node", link: "/FE/node/" },
+      { text: "vue", link: "/FE/vue/" },
+    ],
   },
   {
     text: "TODO",
