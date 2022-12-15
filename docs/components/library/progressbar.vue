@@ -106,7 +106,7 @@ const percentWidth = computed(() => {
   & > span {
     &:first-child {
       display: inline-block;
-      text-align: center;
+      text-align: right;
       width: 200px;
       &::after {
         padding-right: 1em;
