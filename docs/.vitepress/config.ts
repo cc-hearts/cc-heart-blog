@@ -9,6 +9,8 @@ const nav: DefaultTheme.NavItem[] = [
     items: [
       { text: "node", link: "/FE/node/" },
       { text: "vue", link: "/FE/vue/" },
+      { text: "react", link: "/FE/react/" },
+      { text: "nest", link: "/FE/nest/" },
     ],
   },
   {
