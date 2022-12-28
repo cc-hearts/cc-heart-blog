@@ -348,6 +348,10 @@ Object.defineProperty(PopupManager, "zIndex", {
 });
 ```
 
+## getBoundingClientRect 的属性解析
+
+![getBoundingClientRect](../../assets/img/FE/vue/getBoundingClientRect.png)
+
 ## 参考资料
 
 -[element-ui loading directive](https://element.eleme.io/#/zh-CN/component/loading#options)
