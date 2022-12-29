@@ -9,9 +9,13 @@ title: TODO
 # 🌰 TODO
 
 <details>
-<summary>展开查看</summary>
+<summary>game</summary>
 <ProgressBar content="grid games" alt="https://codingfantasy.com/games/flexboxadventure/play" :step="3" :total="84" />
+<ProgressBar content="xss games" alt="https://xss-game.appspot.com/level2" :step="2" :total="6" />
+</details>
 
+<details>
+<summary>vue</summary>
 <ProgressBar content="vue" title="计算属性" alt="https://cn.vuejs.org/guide/introduction.html" :step="20" :total="100" />
 
 > `v-if` 的优先级要比`v-for` 更高
