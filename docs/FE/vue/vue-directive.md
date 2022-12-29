@@ -354,6 +354,6 @@ Object.defineProperty(PopupManager, "zIndex", {
 
 ## 参考资料
 
--[element-ui loading directive](https://element.eleme.io/#/zh-CN/component/loading#options)
+- [element-ui loading directive](https://element.eleme.io/#/zh-CN/component/loading#options)
 
 - [vue directive](https://v2.cn.vuejs.org/v2/guide/custom-directive.html)
