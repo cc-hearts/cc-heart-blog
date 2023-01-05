@@ -6,10 +6,10 @@ titleTemplate: 选项卡描述
 editLink: true
 lastUpdated: true
 hero:
-  name: heart
-  image:
-    src: /logo.png
-    alt: heart
+  name: cc-heart
+  # image:
+  #   src:
+  #   alt: heart
   actions:
     - theme: brand
       text: Get Started

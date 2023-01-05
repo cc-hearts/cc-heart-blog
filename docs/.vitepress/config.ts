@@ -24,7 +24,7 @@ const nav: DefaultTheme.NavItem[] = [
 ];
 
 export default defineConfig({
-  title: "heart blog",
+  title: "cc-heart blog",
   description: "life",
   lang: "cn-ZH",
   base: "/",
