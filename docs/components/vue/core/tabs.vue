@@ -101,6 +101,7 @@ onMounted(() => {
 
     li {
       flex: 1;
+      text-align: center;
       padding: 0 12px;
       position: relative;
       white-space: nowrap;
