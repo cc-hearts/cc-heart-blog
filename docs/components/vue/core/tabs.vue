@@ -3,10 +3,10 @@
     <li
       v-for="(item, index) in columns"
       :class="[
-        activeBar === index ? 'tab-bar__active' : '',
+        activeTabs === index ? 'tab-bar__active' : '',
         textHidden ? 'tab-bar__text-hidden' : '',
       ]"
-      @click="handleChangeTabBar(index)"
+      @click="handleChangeTabs(index)"
       ref="liEl"
     >
       <template v-if="item.slot">
@@ -22,22 +22,26 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref, withDefaults } from "vue";
-interface tabBar {
+import { onMounted, reactive, ref, withDefaults, watch } from "vue";
+interface Tabs {
   text: string;
   slot?: { name: string };
   [prop: string]: unknown;
 }
 interface IProps {
-  columns: tabBar[];
-  active?: number;
+  columns: Tabs[];
+  active?: number | undefined;
   textHidden?: boolean;
 }
-withDefaults(defineProps<IProps>(), {
+const props = withDefaults(defineProps<IProps>(), {
   columns: () => [],
-  active: 0,
+  active: void 0,
   textHidden: false,
 });
+
+const emits = defineEmits<{
+  (event: "update:active", index: number): void;
+}>();
 const styles = reactive({
   "--tab-bar-current-width": "0px",
   "--tab-bar-current-left": "0px",
@@ -45,8 +49,8 @@ const styles = reactive({
 
 const liEl = ref<HTMLLIElement[] | null>(null);
 
-const activeBar = ref(-1);
-function handleChangeTabBar(index: number) {
+const activeTabs = ref(-1);
+function handleChangeTabs(index: number) {
   const el = liEl.value?.[index];
   if (!el) {
     return;
@@ -54,12 +58,23 @@ function handleChangeTabBar(index: number) {
   const { width } = el.getBoundingClientRect();
   styles["--tab-bar-current-left"] = el.offsetLeft + "px";
   styles["--tab-bar-current-width"] = width + "px";
-  activeBar.value = index;
+  activeTabs.value = index;
+  emits("update:active", index);
 }
+
+watch(
+  () => props.active,
+  (val) => {
+    if (val !== void 0 && val !== activeTabs.value) {
+      console.log('123')
+      activeTabs.value = val;
+    }
+  }
+);
 
 onMounted(() => {
   if (liEl.value && liEl.value.length > 0) {
-    handleChangeTabBar(0);
+    handleChangeTabs(props.active ?? 0);
   }
 });
 </script>
