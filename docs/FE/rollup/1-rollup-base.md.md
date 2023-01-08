@@ -202,6 +202,7 @@ export default function (commandLineArgs) {
 
 此时在进行打包 则可以看见所有的第三方依赖也被打包了
 
-## Promise
 
-TODO:
+## 代码
+
+[式例代码](https://github.com/cc-hearts/daily-demo/tree/master/packages/rollup/base)

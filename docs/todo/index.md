@@ -27,3 +27,7 @@ title: TODO
 > 计算属性值会基于其响应式依赖被缓存。一个计算属性仅会在其响应式依赖更新时才重新计算。
 
 </details>
+
+
+- rollup promise use
+
