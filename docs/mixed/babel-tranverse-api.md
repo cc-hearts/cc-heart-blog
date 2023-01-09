@@ -1,8 +1,8 @@
 ---
-title: babel 转译 api 的一次实现
+title: babel 转译 apis 的实现
 ---
 
-# babel 转译 api 的一次实现
+# babel 转译 apis 的实现
 
 由于最近的需求需要对`api` 进行权限添加处理 因此想到了用`babel` 对代码进行词法分析 并且提取出相应的节点 生成一个`json`对象的方式对`api`进行提取
 

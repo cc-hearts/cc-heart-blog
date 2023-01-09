@@ -1,5 +1,5 @@
 ---
-title: babel 转译 vue-route
+title: babel 转译 vue-route 文件结构
 ---
 
 # babel 转译 vue-route 文件结构

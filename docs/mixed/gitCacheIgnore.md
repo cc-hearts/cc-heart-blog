@@ -1,5 +1,5 @@
 ---
-title: git ignore track files
+title: git 清除缓存
 ---
 
 # git ignore track files
